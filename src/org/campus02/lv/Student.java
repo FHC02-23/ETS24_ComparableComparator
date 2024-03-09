@@ -50,12 +50,14 @@ public class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student other) {
-        if (this.matrNr < other.matrNr) {
-            return -1;
-        }
-        if (this.matrNr > other.matrNr) {
-            return 1;
-        }
-        return 0;
+//        if (this.matrNr < other.matrNr) {
+//            return -1;
+//        }
+//        if (this.matrNr > other.matrNr) {
+//            return 1;
+//        }
+//        return 0;
+
+        return Integer.compare(other.matrNr, this.matrNr);
     }
 }
