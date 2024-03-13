@@ -14,5 +14,17 @@ public class EmployeeSortDemo {
 
         Arrays.sort(employees);
         System.out.println(Arrays.toString(employees));
+
+        Arrays.sort(employees, new NameAscComparator());
+        System.out.println(Arrays.toString(employees));
+
+        Arrays.sort(employees, new SalaryDescComparator());
+        System.out.println(Arrays.toString(employees));
+
+        Arrays.sort(employees, new DepartmentAscNameDescComparator());
+        System.out.println(Arrays.toString(employees));
+
+        Arrays.sort(employees, new SalaryAscNameAscComparator());
+        System.out.println(Arrays.toString(employees));
     }
 }

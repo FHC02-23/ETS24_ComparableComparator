@@ -1,5 +1,10 @@
 package org.campus02.lv;
 
+import org.campus02.lv.cartcomparators.ArticlesDescItemsAscComparator;
+import org.campus02.lv.cartcomparators.AvgAmountPerArticleDescComparator;
+import org.campus02.lv.cartcomparators.AvgAmountPerItemAscComparator;
+import org.campus02.lv.cartcomparators.UsernameDescTotalAmountAscComparator;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -27,6 +32,26 @@ public class CartSortDemo {
         // sortiere absteigend nach totalItems
         carts.sort(new CartTotalItemsDescComparator());
         System.out.println("Sortierung nach totalItems");
+        System.out.println(carts);
+
+        /*
+         * ÜBUNGSBLATT DEMO
+         */
+        System.out.println();
+        carts.sort(new ArticlesDescItemsAscComparator());
+        System.out.println("Sort: Number of Articles Desc and Itmes Asc");
+        System.out.println(carts);
+
+        System.out.println("Sort: Username Desc and TotalAmount Asc");
+        carts.sort(new UsernameDescTotalAmountAscComparator());
+        System.out.println(carts);
+
+        System.out.println("Sort: Average Amount Per Items ASC");
+        carts.sort(new AvgAmountPerItemAscComparator());
+        System.out.println(carts);
+
+        System.out.println("Sort: Average Amount Per Article Desc");
+        carts.sort(new AvgAmountPerArticleDescComparator());
         System.out.println(carts);
     }
 }
